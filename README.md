@@ -9,12 +9,13 @@ PeerShare has two components:
    implemented sophisticated searching algorithms; but an exact match.
 		
    The server provides the interface similar to ones mentioned below to the peer clients:
+		
 		registry(peer id, file name, ...) 
 			Invoked by a peer to register all its files with the
 			indexing server. The server then builds the index for the peer. 
 
 		lookup(file name)
-			This procedure should search the index and return all the matching peers to the requestor.
+			This procedure will search the index and return all the matching peers to the requestor.
 	
 2. A peer
    A peer is both a client and a server. 
@@ -24,7 +25,8 @@ PeerShare has two components:
    As a server, the peer waits for requests from other peers and sends the requested file when receiving a request.
 
    The peer server provides the interface similar to one mentioned below to the peer client:
- 		retrieve(file name)
+   
+		retrieve(file name)
 			Invoked by a peer to download a file from another peer. 
 
 			
